@@ -12,7 +12,7 @@ nav a{margin-right:16px}
 <nav><a href="#terms">Terms of Use</a><a href="#privacy">Privacy Policy</a></nav>
 
 <h2 id="terms">Terms of Use</h2>
-<p>By using SmartDraft AI you agree to these terms. Effective October 24, 2026; provided by SmartDraft AI.</p>
+<p>By using SmartDraft AI you agree to these terms. Effective October 24, 2026 (last updated October 25, 2026); provided by SmartDraft AI.</p>
 <ol>
 <li><b>What it is.</b> SmartDraft AI is a Chrome extension that helps you write email and message drafts (Gmail, Outlook, LinkedIn, Slack, Upwork) using AI.</li>
 <li><b>You review everything.</b> AI can be wrong or off-tone. You are responsible for reading, editing and approving every draft before you send it. We never send messages for you.</li>
@@ -20,6 +20,7 @@ nav a{margin-right:16px}
 <li><b>Acceptable use.</b> Do not use SmartDraft AI for spam, harassment, fraud, illegal content, or to break the rules of the sites it runs on. Do not try to misuse, reverse-engineer or overload the service.</li>
 <li><b>Your content.</b> You keep ownership of your emails, personas and drafts. You give us permission to process them only to run the features you use.</li>
 <li><b>Third-party services.</b> Drafts are produced with Google Gemini, sign-in can use Google, and data is stored with Supabase. Their own terms apply to their parts.</li>
+<li><b>Daily limit and your own key.</b> Drafts made with the SmartDraft key are limited each day, and the limit may change. You can instead use your own Gemini key in Settings. Drafts made with your own key are subject to Google's terms and limits for that key, and you are responsible for any charges on it.</li>
 <li><b>No guarantees.</b> The service is provided "as is". We do not promise it will be error-free or always available.</li>
 <li><b>Limit of liability.</b> To the extent the law allows, SmartDraft AI is not liable for indirect or lost-profit damages arising from your use of the extension.</li>
 <li><b>Ending.</b> You can stop any time, and delete your cloud data in Settings. We may suspend accounts that break these terms.</li>
@@ -28,19 +29,20 @@ nav a{margin-right:16px}
 </ol>
 
 <h2 id="privacy">Privacy Policy</h2>
-<p>SmartDraft AI sends your email text to Google Gemini to write drafts, and stores your profiles, history and settings in your account on Supabase. We do not sell your data. Effective October 24, 2026; controller: SmartDraft AI.</p>
+<p>SmartDraft AI sends your email text to Google Gemini to write drafts, and stores your profiles, history and settings in your account on Supabase. We do not sell your data. Effective October 24, 2026 (last updated October 25, 2026); controller: SmartDraft AI.</p>
 <p><b>What we collect and why</b></p>
 <table>
 <tr><th>Data</th><th>Why</th><th>Where it goes</th></tr>
 <tr><td>Email address and sign-in details</td><td>Create and secure your account</td><td>Supabase (and Google, if you sign in with Google)</td></tr>
-<tr><td>Text of emails or messages you scan or paste, and your typed instructions</td><td>Write the draft you asked for</td><td>Sent to Google Gemini</td></tr>
+<tr><td>Text of emails or messages you scan or paste, your typed instructions, and rows of CSV batches you run</td><td>Write the draft you asked for</td><td>Sent to Google Gemini. With the SmartDraft key it passes through our server (a Supabase function) that adds our key; we do not store this text there. With your own key it goes straight from your browser to Google.</td></tr>
+<tr><td>Usage counts: the type of request (scan, chat or batch row), the time, and a batch label</td><td>Enforce the daily limit and show your Usage page</td><td>Supabase. No email or message text is kept in these counts.</td></tr>
 <tr><td>Personas, draft history, CSV batches, settings</td><td>Sync across your devices</td><td>Supabase</td></tr>
-<tr><td>Your Gemini API key, if you enter one</td><td>Call Gemini</td><td>Stored only on your device</td></tr>
+<tr><td>Your own Gemini API key, if you enter one</td><td>Call Gemini yourself</td><td>Stored only on your device. We never receive it, except when you choose Auto or SmartDraft key and your own key hits its limit, in which case your request is sent through our server with the SmartDraft key instead (your own key is not sent).</td></tr>
 <tr><td>Local preferences and cache</td><td>Make the extension work</td><td>Your browser storage only</td></tr>
 </table>
 <p><b>What we do not do.</b> We do not sell or rent your data, use it for advertising, or read your pages beyond the email or message you choose to scan or paste. Use of information received from Google follows the Chrome Web Store User Data Policy, including its Limited Use requirements.</p>
 <p><b>Who sees it.</b> Only you, plus the processors above: Google (Gemini and sign-in) and Supabase (storage). We may disclose data if the law requires it.</p>
-<p><b>Your control.</b> In Settings, "Clear old drafts" trims history and "Delete my cloud data" erases your synced personas, drafts, batches and settings and signs you out. For full account deletion or any request, email marvsticks123@gmail.com.</p>
+<p><b>Your control.</b> In Settings, "Clear old drafts" trims history, "Delete my cloud data" erases your synced personas, drafts, batches and settings and signs you out, and "Delete my account" removes your login and your data, including your usage counts. You can choose the key source (Auto, SmartDraft or your own key) in Settings. For any other request, email marvsticks123@gmail.com.</p>
 <p><b>Security.</b> Data travels over HTTPS and is protected by per-user access rules in Supabase. No system is perfectly secure.</p>
 <p><b>Children.</b> The extension is not for children under 13.</p>
 <p><b>Changes and contact.</b> We will update this page when practices change. Questions: marvsticks123@gmail.com.</p>
